@@ -118,3 +118,5 @@ require (
 	google.golang.org/protobuf v1.36.8 // indirect
 	howett.net/plist v1.0.1 // indirect
 )
+
+replace github.com/restic/rest-server => github.com/jtru/rest-server v0.0.0-20261012170735-0f417df2c76c
