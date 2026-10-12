@@ -15,6 +15,7 @@ func init() {
 type ResticModule struct {
 	RepositoryPath   string `json:"repository_path,omitempty"`
 	AppendOnly       bool   `json:"append_only,omitempty"`
+	ReadOnly         bool   `json:"read_only,omitempty"`
 	Debug            bool   `json:"debug,omitempty"`
 	MaxRepoSize      int64  `json:"max_repo_size,omitempty"`
 	NoVerifyUpload   bool   `json:"no_verify_upload,omitempty"`
@@ -41,6 +42,7 @@ func (m *ResticModule) Provision(ctx caddy.Context) error {
 		NoAuth:           m.NoAuth,
 		HtpasswdPath:     m.HtpasswdPath,
 		AppendOnly:       m.AppendOnly,
+		ReadOnly:         m.ReadOnly,
 		Debug:            m.Debug,
 		MaxRepoSize:      m.MaxRepoSize,
 		NoVerifyUpload:   m.NoVerifyUpload,
